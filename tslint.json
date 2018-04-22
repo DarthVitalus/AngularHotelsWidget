@@ -6,10 +6,10 @@
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+//    "comment-format": [
+//      true,
+//      "check-space"
+//    ],
     "curly": true,
     "deprecation": {
       "severity": "warn"
@@ -45,7 +45,7 @@
       }
     ],
     "no-arg": true,
-    "no-bitwise": true,
+    //"no-bitwise": true,
     "no-console": [
       true,
       "debug",
@@ -70,7 +70,7 @@
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
+    //"no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
     "no-use-before-declare": true,

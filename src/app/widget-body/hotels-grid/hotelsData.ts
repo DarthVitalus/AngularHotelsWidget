@@ -1,10 +1,9 @@
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-
-export const _hotels = [
+export const _HOTELS: Hotel[] = [
   {
-    name: 'Residence Henri IV',
+    id: 1, name: 'Residence Henri IV',
     img: './assets/images/image1.jpg',
     address: 'Misericordia, 67',
     phone: '4031234789',
@@ -26,7 +25,7 @@ export const _hotels = [
     type: 'hotel'
   },
   {
-    name: 'Sabor da Saudade Resort',
+    id: 2, name: 'Sabor da Saudade Resort',
     img: './assets/images/image2.png',
     address: 'Gloriantstraat, 10HS',
     phone: '8123456789',
@@ -49,7 +48,7 @@ export const _hotels = [
     type: 'weather'
   },
   {
-    name: 'Novotel',
+    id: 3, name: 'Novotel',
     img: './assets/images/image33.jpg',
     address: '2 Rue Scribe, 9th',
     phone: '7125656780',
@@ -72,7 +71,7 @@ export const _hotels = [
     type: 'hotel'
   },
   {
-    name: 'Blue Lake',
+    id: 4, name: 'Blue Lake',
     img: './assets/images/fishing1.jpg',
     address: 'Perdido Blvd',
     phone: '4563456789',
@@ -95,7 +94,7 @@ export const _hotels = [
     type: 'fishing'
   },
   {
-    name: 'Orange Beach',
+    id: 5, name: 'Orange Beach',
     img: './assets/images/fishing4.jpg',
     address: 'Costa dorado',
     phone: '5553433389',
@@ -118,7 +117,7 @@ export const _hotels = [
     type: 'fishing'
   },
   {
-    name: 'Hype Park Residence',
+    id: 6, name: 'Hype Park Residence',
     img: './assets/images/image30.jpg',
     address: 'Abbey Road 23',
     phone: '4323408089',
@@ -141,7 +140,7 @@ export const _hotels = [
     type: 'tours'
   },
   {
-    name: 'Marriott Guangzhou',
+    id: 7, name: 'Marriott Guangzhou',
     img: './assets/images/image48.jpg',
     address: '122 Liuhua Rd',
     phone: '101345639',
@@ -165,4 +164,4 @@ export const _hotels = [
   }
 ];
 
-//export const hotels = Observable.of(_hotels) //TODO Если раскомментировать - при сборке получаю Unknown property 'of'
+export const _HOTELS2 = Observable.of(_HOTELS); //TODO Если раскомментировать - при сборке получаю Unknown property 'of'

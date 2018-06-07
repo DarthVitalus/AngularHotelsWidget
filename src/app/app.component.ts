@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const self = this;
-    self.startClock();
+    //self.startClock();
   }
 
   private onClockClick(event): void {
@@ -35,5 +35,3 @@ export class AppComponent implements OnInit {
     clearInterval(self.timer);
   }
 }
-
-//TODO перерисовка грида при тике часов?? почему происходит? видно в консоли

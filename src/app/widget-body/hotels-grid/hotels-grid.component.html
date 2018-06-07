@@ -1,0 +1,40 @@
+<div class="element-bg-img">
+  <img [src]="selectedItem.img" alt="" class="img-responsive">
+</div>
+<div class="element-left-bottom">
+  <div class="ele-strip">
+    <ul>
+      <li
+        *ngFor="let hotelType of hotels | getProperty:{propName:'type', uniqueOnly:true} ; index as i"
+        [ngClass]="{'anc-bor': index === hotels.length}"
+      >
+        <a
+          [ngClass]="{'selected': hotelType === selectedHotelType}"
+          (click)="onFilterClick(hotelType)"
+          href="#"
+          [routerLink]="['/' + hotelType, selectedItem.id]"
+        >
+          {{hotelType}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="village">
+    <h3>Currently available offers</h3>
+    <span class="line"> </span>
+    <div class="activity_box">
+      <div class="scrollbar" id="style-2">
+
+        <app-hotel-card
+          *ngFor="let hotel of hotels | filterBy:{propName:'type', value:selectedHotelType}"
+          [hotel]="hotel"
+          [selectedId]="selectedItem.id"
+          (cardClick)="onCardClick(hotel)"
+          [routerLink]="['/' + hotel.type, hotel.id]"
+        ></app-hotel-card>
+
+      </div>
+    </div>
+  </div>
+</div>

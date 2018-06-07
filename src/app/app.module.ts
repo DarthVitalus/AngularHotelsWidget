@@ -4,11 +4,18 @@ import {MatButtonModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
-import { DateToTimePipe } from './date-to-time.pipe';
-import {MenuComponent} from './menu/menu.component';
-import { HotelsGridComponent } from './hotels-grid/hotels-grid.component';
-import { HotelCardComponent } from './hotels-grid/hotel-card/hotel-card.component';
-import {HotelDataService} from './hotels-grid/hotel-data.service';
+import { DateToTimePipe } from './common/pipes/date-to-time.pipe';
+import {MenuComponent} from './widget-body/menu/menu.component';
+import { HotelsGridComponent } from './widget-body/hotels-grid/hotels-grid.component';
+import { HotelCardComponent } from './widget-body/hotels-grid/hotel-card/hotel-card.component';
+import {HotelDataService} from './widget-body/hotels-grid/hotel-data.service';
+import { GetPropertyPipe } from './common/pipes/get-property.pipe';
+import { FilterByPipe } from './common/pipes/filter-by.pipe';
+import { WeatherWidgetComponent } from './widget-body/weather-widget/weather-widget.component';
+import { SocialWidgetComponent } from './widget-body/social-widget/social-widget.component';
+import {RouterModule} from '@angular/router';
+import {routes} from './routes';
+import { WidgetBodyComponent } from './widget-body/widget-body.component';
 
 
 @NgModule({
@@ -17,11 +24,17 @@ import {HotelDataService} from './hotels-grid/hotel-data.service';
     DateToTimePipe,
     MenuComponent,
     HotelsGridComponent,
-    HotelCardComponent
+    HotelCardComponent,
+    GetPropertyPipe,
+    FilterByPipe,
+    WeatherWidgetComponent,
+    SocialWidgetComponent,
+    WidgetBodyComponent
   ],
   imports: [
     BrowserModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     HotelDataService

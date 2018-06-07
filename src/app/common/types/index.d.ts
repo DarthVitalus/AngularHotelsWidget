@@ -11,6 +11,7 @@ interface SocialInfo {
   following: number;
 }
 interface Hotel {
+  id: number;
   name: string;
   img: string;
   address: string;

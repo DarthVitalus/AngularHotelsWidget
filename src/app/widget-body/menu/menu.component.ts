@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   @Output()
   public clockClick = new EventEmitter();
 
-  private start = false;
+  private start = true;
   private caption = this.stopCaption;
 
   private onClick(): void {
@@ -28,6 +28,7 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.caption = this.stopCaption;
+    const self = this;
+    self.caption = self.start ? self.startCaption : self.stopCaption;
   }
 }
